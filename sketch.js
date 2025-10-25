@@ -116,7 +116,15 @@ let levelNumber = 0;
 function draw() {
     background(10);
 
-
+    if (levels && levels.length > 0) {
+            for (let level of levels) {
+                if (level.toggleLines.length > 0) {
+                    for (let tl of level.toggleLines) {
+                        tl.Update();
+                    }
+                }
+            }
+        }
     // if(frameCount % 5==0 ){
     //
     //     levelNumber  = (levelNumber +1)%43;

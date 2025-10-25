@@ -13,6 +13,10 @@ function setupLevels() {
     tempLevel.lines.push(new Line(460, 100, 460, 220));
     tempLevel.lines.push(new Line(460, 220, 740, 220));
     tempLevel.lines.push(new Line(740, 220, 740, 100));
+
+    tempLevel.toggleLines.push(new ToggleLine(320, 820, 880, 820, 60, 60));
+    tempLevel.toggleLines.push(new ToggleLine(460, 100, 740, 100, 120, 30));
+
     // tempLevel.lines.push(new Line(320,260,520, 460));
     // tempLevel.lines.push(new Line(120,460,320, 260));
     // tempLevel.lines.push(new Line(680,820,1080,420));

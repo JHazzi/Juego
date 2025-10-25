@@ -2,6 +2,7 @@ class Level{
     constructor() {
         this.levelImage = null;
         this.lines = [];
+        this.toggleLines = [];
         this.levelNo =0;
         this.isBlizzardLevel = false;
         this.isIceLevel = false;
@@ -17,6 +18,9 @@ class Level{
                 l.Show();
             }
         }
+        for (let tl of this.toggleLines) {
+                tl.Show();
+            }
         if(showingCoins){
             for(let c of this.coins){
                 c.show();

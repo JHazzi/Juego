@@ -291,7 +291,19 @@ class Player {
     Update() {
         if (this.playersDead)//|| this.hasFinishedInstructions)
             return;
-        let currentLines = levels[this.currentLevelNo].lines;
+        
+        // --- MODIFICACIÓN IMPORTANTE ---
+        let currentLevel = levels[this.currentLevelNo];
+        
+        let currentLines = [...currentLevel.lines]; 
+
+        for (let tl of currentLevel.toggleLines) {
+            if (tl.isCollidable) { 
+                currentLines.push(tl);
+            }
+        }
+        
+        //let currentLines = levels[this.currentLevelNo].lines;
         if (!testingSinglePlayer && !this.hasFinishedInstructions) {
             this.UpdateAIAction()
         }
